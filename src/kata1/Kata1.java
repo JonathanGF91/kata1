@@ -1,7 +1,8 @@
 
 package kata1;
 
-import java.util.Date;
+import java.util.Calendar;
+import java.util.GregorianCalendar;
 
 /**
  *
@@ -11,9 +12,12 @@ public class Kata1 {
 
 
     public static void main(String[] args) {
-        System.out.println("hola mundo");
-        Person person = new Person("Jonathan", new Date(91,9,29));
-        System.out.println(person.getName() + " tiene" + person.getAge() + "años");
+        Calendar date;
+        date = GregorianCalendar.getInstance();
+        date.set(1991,9,29);
+
+        Person person = new Person("Jonathan", date);
+        System.out.println(person.getName() + " tiene " + person.getAge() + " años");
         
     }
     
